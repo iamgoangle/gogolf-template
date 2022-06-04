@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun  4 21:08:59 2022
+# Make data base, printed on Sat Jun  4 21:14:12 2022
 
 # Variables
 
@@ -49,11 +49,12 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-19764023-4b5f-4d47-9aa6-e8da9decfcdc.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-4b9d8ac9-6622-44f2-a371-bbb03043ce90.sock
 # environment
 VSCODE_CWD = /Users/golf.teerapong/dev/gokub-template
 # environment
 PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+ 
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `Makefile', line 1)
@@ -93,7 +94,7 @@ VSCODE_CODE_CACHE_PATH = /Users/golf.teerapong/Library/Application Support/Code/
 # environment
 LOGNAME = golf.teerapong
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /Users/golf.teerapong/.oh-my-zsh
 # environment
@@ -138,7 +139,6 @@ TMPDIR = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/
 VSCODE_IPC_HOOK = /Users/golf.teerapong/Library/Application Support/Code/1.67.2-main.sock
 # makefile
 MAKEFLAGS = Rrqp
- 
 # environment
 MFLAGS = -Rrqp
 # automatic
@@ -255,6 +255,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun  4 21:08:59 2022
+# Finished Make data base on Sat Jun  4 21:14:12 2022
 
  
