@@ -10,7 +10,7 @@ My go backend template. This is a go boiplerplate to quickly started the new pro
 
 # Getting Started
 ## Prerequsition
-Please run `$ make init` to initialize the basic needed command and dependencies for your local development. We built this command to install the stuff to make the industry standard good grade to local development.
+Please run `$ make init` to initialize the basic needed command and dependencies for your local development. We built this command to install the stuff to make the industry stnadard good grade to local development.
 
 Here is a standard development pipeline installed.
 
@@ -18,12 +18,9 @@ Here is a standard development pipeline installed.
 2. node
 3. pre-commit
 
-## Pre-Commit
-1. commit linter
-2. code formatter
-3. unit test
-4. code scanner
-5. hooks
+## 👩‍⚕️ Pre-Commit
+You can reached pre-commit hooks and rules under `.pre-commit-config.yaml` configuration file.
+
 
 ## Miscellaneous
 ### Set $GOPATH
