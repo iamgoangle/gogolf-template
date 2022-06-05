@@ -1,6 +1,7 @@
 
 # GOGOLF Boilerplate Template
 My go backend template. This is a go boiplerplate to quickly started the new project with golang and standard dependencies for local development pipeline.
+ ![Tux, the Linux mascot](/docs/GOGolf.jpg)
 
 **Features**
 
