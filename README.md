@@ -21,6 +21,9 @@ Here is a standard development pipeline installed.
 ## 👩‍⚕️ Pre-Commit
 You can reached pre-commit hooks and rules under `.pre-commit-config.yaml` configuration file.
 
+## Commit Lint
+The commit lint is make more sense of good engineering should be. Essepcially, the `commitlint`, in this template I've follow the convention here [https://www.conventionalcommits.org/en/v1.0.0/](https://www.conventionalcommits.org/en/v1.0.0/)
+
 
 ## Miscellaneous
 ### Set $GOPATH
