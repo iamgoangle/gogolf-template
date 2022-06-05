@@ -10,6 +10,7 @@ init:
 	pre-commit install
 
 precommit.rehooks:
+	pre-commit autoupdate
 	pre-commit install --install-hooks
 
 c.test:
