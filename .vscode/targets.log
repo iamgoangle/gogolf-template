@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun  4 21:14:12 2022
+# Make data base, printed on Sun Jun  5 03:15:22 2022
 
 # Variables
 
@@ -25,6 +25,7 @@ LC_CTYPE = UTF-8
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
+ 
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -41,6 +42,8 @@ _ = /usr/bin/make
 # environment
 STARSHIP_SESSION_KEY = 1108741431002818
 # environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
 AUTOJUMP_SOURCED = 1
 # environment
 VSCODE_VERBOSE_LOGGING = true
@@ -53,12 +56,15 @@ VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscod
 # environment
 VSCODE_CWD = /Users/golf.teerapong/dev/gokub-template
 # environment
+GOPROXY = https://proxy.golang.org,direct
+# environment
 PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
- 
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
+# environment
+GOPATH = /Users/golf.teerapong/go
 # environment
 LaunchInstanceID = 2D1191CB-CA65-4E9A-AC85-8D206B642C16
 # environment
@@ -82,7 +88,7 @@ ORIGINAL_XDG_CURRENT_DESKTOP = undefined
 # environment
 MANPATH = /opt/homebrew/share/man::
 # environment
-VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+GOMODCACHE = /Users/golf.teerapong/go/pkg/mod
 # environment
 HOME = /Users/golf.teerapong
 # default
@@ -116,7 +122,7 @@ MAKE_VERSION := 3.81
 # environment
 USER = golf.teerapong
 # makefile
-.DEFAULT_GOAL := 
+.DEFAULT_GOAL := run
 # default
 MAKECMDGOALS := all
 # environment
@@ -164,6 +170,7 @@ COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F8:0x0:0x0
 # environment
+ 
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
@@ -194,7 +201,7 @@ VSCODE_PID = 8297
 # environment
 STARSHIP_SHELL = zsh
 # variable set hash-table stats:
-# Load=89/1024=9%, Rehash=0, Collisions=7/111=6%
+# Load=92/1024=9%, Rehash=0, Collisions=8/115=7%
 
 # Pattern-specific Variable Values
 
@@ -202,9 +209,9 @@ STARSHIP_SHELL = zsh
 
 # Directories
 
-# . (device 16777233, inode 2344656): 7 files, no impossibilities.
+# . (device 16777233, inode 2344656): 18 files, no impossibilities.
 
-# 7 files, no impossibilities in 1 directories.
+# 18 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -230,11 +237,17 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-04 21:08:14
+#  Last modified 2022-06-05 03:15:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+dev:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -242,8 +255,16 @@ Makefile:
 #  Modification time never checked.
 #  File has not been updated.
 
+run: dev
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 2):
+	docker compose up --build
+	
+
 # files hash-table stats:
-# Load=4/1024=0%, Rehash=0, Collisions=0/16=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/19=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -255,6 +276,6 @@ Makefile:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sat Jun  4 21:14:12 2022
+# Finished Make data base on Sun Jun  5 03:15:22 2022
 
  

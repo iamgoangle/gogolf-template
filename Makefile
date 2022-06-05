@@ -1,4 +1,11 @@
-DOMAIN=golf
+init:
+    @echo "== init =="
+    brew install go
+    brew install node
+    brew install pre-commit
 
-test:
- go test ./...
+run:dev:
+	docker compose up --build.
+
+greeting:
+	@echo "hello".

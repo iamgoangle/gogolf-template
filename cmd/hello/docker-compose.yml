@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  hello:
+    # platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ../../build/Dockerfile.dev
+    container_name: hello
+    ports:
+      - 8080:8080
+    volumes:
+      - ../../:/src/go
+      - $GOPATH/pkg/mod:/go/pkg/mod
+    working_dir: /src/go/cmd/hello
