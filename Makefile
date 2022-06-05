@@ -12,6 +12,7 @@ init:
 precommit.rehooks:
 	pre-commit autoupdate
 	pre-commit install --install-hooks
+	pre-commit install --hook-type commit-msg
 
 c.test:
 	@echo "== 🦸‍♀️ ci.tester =="
