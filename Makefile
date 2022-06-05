@@ -1,11 +1,15 @@
 init:
-    @echo "== init =="
-    brew install go
-    brew install node
-    brew install pre-commit
+	@echo "== 👩‍🌾 init =="
 
-run:dev:
-	docker compose up --build.
+	brew install go
+	brew install node
+	brew install pre-commit
+	brew install golangci-lint
+	brew upgrade golangci-lint
 
-greeting:
-	@echo "hello".
+c.test:
+	@echo "== 🦸‍♀️ ci.tester =="
+
+ci.lint:
+	@echo "== 🦸‍♀️ ci.linter =="
+	golangci-lint run -v ./... --fix
