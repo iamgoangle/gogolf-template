@@ -1,4 +1,4 @@
-module github.com/iamgoangle/gokub-template
+module github.com/iamgoangle/gogolf-template
 
 go 1.18
 

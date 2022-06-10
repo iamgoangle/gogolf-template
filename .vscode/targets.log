@@ -6,11 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
-make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sun Jun  5 03:15:22 2022
+# Make data base, printed on Thu Jun  9 16:17:03 2022
 
 # Variables
 
@@ -19,13 +17,8 @@ make: *** No rule to make target `all'.  Stop.
 # automatic
 ?F = $(notdir $?)
 # environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
-# environment
-LC_CTYPE = UTF-8
-# environment
 VSCODE_LOG_NATIVE = false
 # automatic
- 
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -40,7 +33,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # environment
-STARSHIP_SESSION_KEY = 1108741431002818
+STARSHIP_SESSION_KEY = 2594917212192052
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -52,13 +45,13 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-4b9d8ac9-6622-44f2-a371-bbb03043ce90.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-7140aca2-4ddf-4807-9eed-f002a3bd5093.sock
 # environment
-VSCODE_CWD = /Users/golf.teerapong/dev/gokub-template
+VSCODE_CWD = /
 # environment
 GOPROXY = https://proxy.golang.org,direct
 # environment
-PATH = /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH = /Users/golf.teerapong/go/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile (from `Makefile', line 1)
@@ -66,15 +59,13 @@ MAKEFILE_LIST :=  Makefile
 # environment
 GOPATH = /Users/golf.teerapong/go
 # environment
-LaunchInstanceID = 2D1191CB-CA65-4E9A-AC85-8D206B642C16
-# environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.OVkE2dtZVs/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.r94uHsW1qO/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -94,13 +85,11 @@ HOME = /Users/golf.teerapong
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
-VSCODE_CLI = 1
-# environment
 VSCODE_CODE_CACHE_PATH = /Users/golf.teerapong/Library/Application Support/Code/CachedData/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5
 # environment
 LOGNAME = golf.teerapong
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /Users/golf.teerapong/.oh-my-zsh
 # environment
@@ -109,34 +98,26 @@ VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
 XPC_FLAGS = 0x0
-# environment
-COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
 # environment
-LC_TERMINAL = iTerm2
-# environment
-SHLVL = 3
+SHLVL = 1
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = golf.teerapong
 # makefile
-.DEFAULT_GOAL := run
-# default
-MAKECMDGOALS := all
-# environment
-TERM_SESSION_ID = w0t0p0:BB047142-5FDE-452C-B883-B9DDB49335FA
+.DEFAULT_GOAL := init
 # environment
 LESS = -R
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
 MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
-# environment
-TERM_PROGRAM = iTerm.app
 # default
-.VARIABLES := 
+.VARIABLES :=
 # environment
 TMPDIR = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/
 # automatic
@@ -150,11 +131,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-TERM_PROGRAM_VERSION = 3.4.15
-# environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.660558.660564.1D415CC9-E3A2-4C44-83FF-72098C0EEBD2
-# environment
-LC_TERMINAL_VERSION = 3.4.15
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.660558.660564
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -162,32 +139,23 @@ HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:BB047142-5FDE-452C-B883-B9DDB49335FA
-# environment
 HOMEBREW_REPOSITORY = /opt/homebrew
-# environment
-COLORFGBG = 15;0
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F8:0x0:0x0
 # environment
- 
 COMMAND_MODE = unix2003
 # default
-MAKEFILES := 
+MAKEFILES :=
 # automatic
 <F = $(notdir $<)
-# environment
-ITERM_PROFILE = Default
 # environment
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186ad
 # automatic
 ^F = $(notdir $^)
 # default
-SUFFIXES := 
+SUFFIXES :=
 # environment
 MAKELEVEL := 0
 # environment
@@ -195,13 +163,11 @@ AUTOJUMP_ERROR_PATH = /Users/golf.teerapong/Library/autojump/errors.log
 # environment
 LANG = C
 # environment
-TERM = xterm-256color
-# environment
-VSCODE_PID = 8297
+VSCODE_PID = 9646
 # environment
 STARSHIP_SHELL = zsh
 # variable set hash-table stats:
-# Load=92/1024=9%, Rehash=0, Collisions=8/115=7%
+# Load=77/1024=8%, Rehash=0, Collisions=5/100=5%
 
 # Pattern-specific Variable Values
 
@@ -209,15 +175,23 @@ STARSHIP_SHELL = zsh
 
 # Directories
 
-# . (device 16777233, inode 2344656): 18 files, no impossibilities.
+# . (device 16777233, inode 2344656): 20 files, no impossibilities.
 
-# 18 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
+
+c.test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 18):
+	@echo "== 🦸‍♀️ ci.tester =="
+
 
 # Not a target:
 all:
@@ -237,17 +211,20 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-05 03:15:17
+#  Last modified 2022-06-05 15:42:50
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-# Not a target:
-dev:
+ci.lint:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  commands to execute (from `Makefile', line 21):
+	@echo "== 🙆 ci.linter =="
+	golangci-lint run -v ./... --fix
+
 
 # Not a target:
 .DEFAULT:
@@ -255,16 +232,36 @@ dev:
 #  Modification time never checked.
 #  File has not been updated.
 
-run: dev
+init:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 2):
-	docker compose up --build
-	
+
+make: *** No rule to make target `all'.  Stop.
+
+	@echo "== 👩‍🌾 init =="
+	brew install go
+	brew install node
+	brew install pre-commit
+	brew install golangci-lint
+	brew upgrade golangci-lint
+	@echo "== pre-commit setup =="
+	pre-commit install
+
+
+precommit.rehooks:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 13):
+	pre-commit autoupdate
+	pre-commit install --install-hooks
+	pre-commit install --hook-type commit-msg
+
 
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/19=0%
+# Load=8/1024=1%, Rehash=0, Collisions=0/20=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -276,6 +273,4 @@ run: dev
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Jun  5 03:15:22 2022
-
- 
+# Finished Make data base on Thu Jun  9 16:17:03 2022
