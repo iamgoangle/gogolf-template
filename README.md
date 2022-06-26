@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents**
+- [Getting Started](#getting-started)
+  - [Prerequsition](#prerequsition)
+  - [👩‍⚕️ Pre-Commit](#%E2%80%8D-pre-commit)
+  - [Commit Lint](#commit-lint)
+  - [Miscellaneous](#miscellaneous)
+    - [Set $GOPATH](#set-gopath)
+- [Hexagonal Architecture](#hexagonal-architecture)
+  - [Architecture Components](#architecture-components)
+    - [Core](#core)
+    - [Domain](#domain)
+    - [Service](#service)
+    - [Repository](#repository)
+    - [Dependency Injection](#dependency-injection)
+      - [Port and Adaptor Design Patterns](#port-and-adaptor-design-patterns)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 # GOGOLF Boilerplate Template
 My go backend template. This is a go boiplerplate to quickly started the new project with golang and standard dependencies for local development pipeline.
@@ -40,3 +61,40 @@ PATH="$GOPATH/bin:$PATH"
 ```
 
 then `source .zshrc` for reload the the environment. You can check you GOPATH by `go env GOPATH`
+
+# Hexagonal Architecture
+This golang project adopt the hexagonal architecture to grouping the code by domain and context of business problems.
+
+## Architecture Components
+### Core
+
+Everything surrounded the `core` this layer contains the concrete core business logics.
+
+The core could be viewed as a “box” (represented as a hexagon) capable of resolve all the business logic independently.
+
+### Domain
+
+The domain entity it contains the go struct definition of each entity that is part of the domain problem and can be used across the application.
+
+>**Seperate of concern**
+For example, this layer should not be known how the data keeps its, or how the caching store in the redis.
+
+**Port** is the interfaces are the ports that external actors will plug their adapters into to drive the application.
+
+**Adapter** is the implementation of the ports
+
+### Service
+Service is through which the client will interact with actual business logic/domain objects. The client can be rest handlers, test agents, etc.
+
+### Repository
+The repository interface allows us to connect to multiple data sources.
+
+### Dependency Injection
+#### Port and Adaptor Design Patterns
+
+Outside concerns, such as repositories and user interfaces, use the adapters to plug into the business domain services.
+
+**References**
+- https://www.linkedin.com/pulse/part-2-go-project-layout-hexagonal-architecture-kaushal-prajapati/
+- https://www.linkedin.com/pulse/hexagonal-software-architecture-implementation-using-golang-ramaboli/
+- https://medium.com/@matiasvarela/hexagonal-architecture-in-go-cfd4e436faa3
