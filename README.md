@@ -1,28 +1,30 @@
+# GOGOLF Boilerplate Template
+My go backend template. This is a go boiplerplate to quickly started the new project with golang and standard dependencies for local development pipeline.
+ ![Tux, the Linux mascot](/docs/GOGolf.jpg)
+ 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 **Table of Contents**
 - [Getting Started](#getting-started)
-  - [Prerequsition](#prerequsition)
-  - [👩‍⚕️ Pre-Commit](#%E2%80%8D-pre-commit)
-  - [Commit Lint](#commit-lint)
-  - [Miscellaneous](#miscellaneous)
-    - [Set $GOPATH](#set-gopath)
+- [Prerequsition](#prerequsition)
+- [👩‍⚕️ Pre-Commit](#%E2%80%8D-pre-commit)
+- [Commit Lint](#commit-lint)
+- [Miscellaneous](#miscellaneous)
+- [Set $GOPATH](#set-gopath)
 - [Hexagonal Architecture](#hexagonal-architecture)
-  - [Architecture Components](#architecture-components)
-    - [Core](#core)
-    - [Domain](#domain)
-    - [Service](#service)
-    - [Repository](#repository)
-    - [Dependency Injection](#dependency-injection)
-      - [Port and Adaptor Design Patterns](#port-and-adaptor-design-patterns)
+- [Architecture Components](#architecture-components)
+- [Core](#core)
+- [Domain](#domain)
+- [Service](#service)
+- [Repository](#repository)
+- [Dependency Injection](#dependency-injection)
+  - [Port and Adaptor Design Patterns](#port-and-adaptor-design-patterns)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
-# GOGOLF Boilerplate Template
-My go backend template. This is a go boiplerplate to quickly started the new project with golang and standard dependencies for local development pipeline.
- ![Tux, the Linux mascot](/docs/GOGolf.jpg)
+**Design Structure**
+[สรุปเรื่อง GopherCon 2018: Kat Zien — How Do You Structure Your Go Apps](https://goangle.medium.com/%E0%B8%AA%E0%B8%A3%E0%B8%B8%E0%B8%9B%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-gophercon-2018-kat-zien-how-do-you-structure-your-go-apps-a96faca9e8f1)
 
 **Features**
 
