@@ -10,10 +10,12 @@ import (
 	"github.com/iamgoangle/gogolf-template/cmd/domain"
 )
 
+//go:generate mockgen -source=handler.go -destination=./mock/service.go UserService
+
 // UserService interface
 type UserService interface {
-	// Fetch is a service to retrieve all active user
-	Fetch() (*domain.User, error)
+	// Create is a service to perform create a new user
+	Create() (*domain.User, error)
 }
 
 // Handler represents handler type

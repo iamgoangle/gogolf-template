@@ -14,6 +14,12 @@ type UserResponse struct {
 
 // User represent user type
 type User struct {
-	Firstname string `json:"firstname"`
-	Lastname  string `json:"lastname"`
+	Name  string `json:"name"`
+	Email string `json:"email"`
+}
+
+// UserModel type
+type UserModel struct {
+	Name  string `bson:"name"`
+	Email string `bson:"email"`
 }
