@@ -1,6 +1,10 @@
 package services
 
-import "github.com/iamgoangle/gogolf-template/cmd/domain"
+import (
+	"fmt"
+
+	"github.com/iamgoangle/gogolf-template/cmd/domain"
+)
 
 // UserService represent user service type
 type UserService struct {
@@ -17,8 +21,13 @@ func NewUserService(rpUsr UserRepository) (*UserService, error) {
 }
 
 func (s *UserService) Create() (*domain.User, error) {
+	usrRepo, err := s.usrRepo.Create()
+	if err != nil {
+		return nil, fmt.Errorf("[UserService.Create]: unable to create new user %w", err)
+	}
+
 	return &domain.User{
-		Name:  "test",
-		Email: "test@test.com",
+		Name:  usrRepo.Name,
+		Email: usrRepo.Email,
 	}, nil
 }
