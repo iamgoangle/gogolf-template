@@ -35,16 +35,16 @@ func (m *MockUserService) EXPECT() *MockUserServiceMockRecorder {
 }
 
 // Create mocks base method.
-func (m *MockUserService) Create() (*domain.User, error) {
+func (m *MockUserService) Create(arg0 *domain.User) (*domain.User, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "Create")
+	ret := m.ctrl.Call(m, "Create", arg0)
 	ret0, _ := ret[0].(*domain.User)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
 // Create indicates an expected call of Create.
-func (mr *MockUserServiceMockRecorder) Create() *gomock.Call {
+func (mr *MockUserServiceMockRecorder) Create(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockUserService)(nil).Create))
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Create", reflect.TypeOf((*MockUserService)(nil).Create), arg0)
 }

@@ -15,16 +15,15 @@ import (
 // UserService interface
 type UserService interface {
 	// Create is a service to perform create a new user
-	Create() (*domain.User, error)
+	Create(*domain.User) (*domain.User, error)
 }
 
 // Handler represents handler type
 type Handler struct {
-	e *echo.Echo
+	Server *echo.Echo
+	Port   string
 
-	appPort string
-
-	userService UserService
+	UserService UserService
 }
 
 // New instance the handler
@@ -34,9 +33,9 @@ func New(e *echo.Echo, port string, uSrv UserService) (*Handler, error) {
 	}
 
 	return &Handler{
-		e:           e,
-		appPort:     port,
-		userService: uSrv,
+		Server:      e,
+		Port:        port,
+		UserService: uSrv,
 	}, nil
 }
 
@@ -48,11 +47,11 @@ func (h *Handler) RunServer() error {
 	}
 
 	s := http.Server{
-		Addr:    ":" + h.appPort,
-		Handler: h.e,
+		Addr:    ":" + h.Port,
+		Handler: h.Server,
 	}
 
-	log.Printf("[Handler.RunServer]: initial the service on port %s ... \n", h.appPort)
+	log.Printf("[Handler.RunServer]: initial the service on port %s ... \n", h.Port)
 
 	err = s.ListenAndServe()
 	if err != nil {
