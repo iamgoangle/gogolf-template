@@ -21,7 +21,7 @@ func NewUserService(rpUsr UserRepository) (*UserService, error) {
 }
 
 func (s *UserService) Create() (*domain.User, error) {
-	usrRepo, err := s.usrRepo.Create()
+	usrRepo, err := s.usrRepo.Create(&domain.UserModel{})
 	if err != nil {
 		return nil, fmt.Errorf("[UserService.Create]: unable to create new user %w", err)
 	}

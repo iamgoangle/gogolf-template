@@ -7,5 +7,5 @@ import "github.com/iamgoangle/gogolf-template/cmd/domain"
 // UserRepository represent database, model, layer interface
 type UserRepository interface {
 	// Create creates a new user
-	Create() (*domain.User, error)
+	Create(usr *domain.UserModel) (*domain.User, error)
 }

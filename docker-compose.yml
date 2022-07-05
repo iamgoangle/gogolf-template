@@ -4,15 +4,13 @@ services:
     # platform: linux/amd64
     build:
       context: .
-      dockerfile: ../build/Dockerfile.dev
+      dockerfile: ./build/Dockerfile.dev
     container_name: app
     env_file:
       - .env.example
     ports:
       - 8080:8080
     volumes:
-      - ../:/app
+      - ./:/app
       - $GOPATH/pkg/mod:/go/pkg/mod
-    working_dir: /app/cmd
-    # command: sh docker-entrypoint-go-dev.sh
-    command: reflex -r '(\.go$$|go\.mod)' -s go run .
+    working_dir: /app

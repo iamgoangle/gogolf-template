@@ -23,17 +23,20 @@ type Handler struct {
 	e *echo.Echo
 
 	appPort string
+
+	userService UserService
 }
 
 // New instance the handler
-func New(e *echo.Echo, port string) (*Handler, error) {
+func New(e *echo.Echo, port string, uSrv UserService) (*Handler, error) {
 	if e == nil || len(port) == 0 {
 		return nil, errors.New("[New]: unable to new handler, please check handler arguments")
 	}
 
 	return &Handler{
-		e:       e,
-		appPort: port,
+		e:           e,
+		appPort:     port,
+		userService: uSrv,
 	}, nil
 }
 

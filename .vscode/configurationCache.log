@@ -1,1 +1,1 @@
-{"buildTargets":["c.test","ci.lint","init","precommit.rehooks"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
+{"buildTargets":["ci.lint","init","precommit.rehooks","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

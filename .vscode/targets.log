@@ -10,19 +10,19 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sun Jun 26 20:57:02 2022
+# Make data base, printed on Tue Jul  5 15:04:05 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
+
 # automatic
 ?F = $(notdir $?)
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 LC_CTYPE = UTF-8
-
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -40,7 +40,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # environment
-STARSHIP_SESSION_KEY = 9730241112579117
+STARSHIP_SESSION_KEY = 2039736132419287
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
@@ -52,7 +52,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-27c5c1f0-49d6-494d-ab51-0a6ad572122a.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/51/w1r24r495_q18jr3jm2ccpp40000gr/T/vscode-ipc-da07eb32-921b-40bb-aa6c-c936b79c6437.sock
 # environment
 VSCODE_CWD = /Users/golf.teerapong/dev/gokub-template
 # environment
@@ -69,10 +69,12 @@ GOPATH = /Users/golf.teerapong/go
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# environment
+KUBECONFIG = /Users/golf.teerapong/.kube/developer-config
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.aPYQo3u6t2/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.04feGIP7Sb/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -124,7 +126,7 @@ USER = golf.teerapong
 # default
 MAKECMDGOALS := all
 # environment
-TERM_SESSION_ID = w0t0p0:F39D44FF-6660-458E-AA8A-0165E0EADA14
+TERM_SESSION_ID = w0t0p1:5E3B07A7-746B-49EA-B59B-AB42F89490A8
 # environment
 LESS = -R
 # automatic
@@ -150,7 +152,7 @@ MFLAGS = -Rrqp
 # environment
 TERM_PROGRAM_VERSION = 3.4.15
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.4894661.4894667.F79A8855-5AEB-41F4-AC2B-96CEF9EFA9AB
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.4894661.4894667.31FB6360-0DC8-456C-B40E-36006D6DF99C
 # environment
 LC_TERMINAL_VERSION = 3.4.15
 # environment
@@ -160,7 +162,7 @@ HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:F39D44FF-6660-458E-AA8A-0165E0EADA14
+ITERM_SESSION_ID = w0t0p1:5E3B07A7-746B-49EA-B59B-AB42F89490A8
 # environment
 HOMEBREW_REPOSITORY = /opt/homebrew
 # environment
@@ -192,11 +194,11 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 11462
+VSCODE_PID = 1628
 # environment
 STARSHIP_SHELL = zsh
 # variable set hash-table stats:
-# Load=90/1024=9%, Rehash=0, Collisions=8/113=7%
+# Load=91/1024=9%, Rehash=0, Collisions=8/114=7%
 
 # Pattern-specific Variable Values
 
@@ -204,23 +206,15 @@ STARSHIP_SHELL = zsh
 
 # Directories
 
-# . (device 16777234, inode 2344656): 21 files, no impossibilities.
+# . (device 16777234, inode 2344656): 27 files, no impossibilities.
 
-# 21 files, no impossibilities in 1 directories.
+# 27 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
 # No implicit rules.
 
 # Files
-
-c.test:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 18):
-	@echo "== 🦸‍♀️ ci.tester =="
-
 
 # Not a target:
 all:
@@ -240,17 +234,25 @@ all:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-06-05 15:42:50
+#  Last modified 2022-07-03 00:36:58
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
+test:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 25):
+	@echo "== 🦸‍️ ci.tester =="
+
+
 ci.lint:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 21):
+#  commands to execute (from `Makefile', line 28):
 	@echo "== 🙆 ci.linter =="
 	golangci-lint run -v ./... --fix
 
@@ -274,13 +276,18 @@ init:
 	brew upgrade golangci-lint
 	@echo "== pre-commit setup =="
 	pre-commit install
+	@echo "== install ginkgo =="
+	go install -mod=mod github.com/onsi/ginkgo/v2/ginkgo
+	go get github.com/onsi/gomega/...
+	@echo "== install gomock =="
+	go install github.com/golang/mock/mockgen@v1.6.0
 
 
 precommit.rehooks:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 13):
+#  commands to execute (from `Makefile', line 20):
 	pre-commit autoupdate
 	pre-commit install --install-hooks
 	pre-commit install --hook-type commit-msg
@@ -299,4 +306,4 @@ precommit.rehooks:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Jun 26 20:57:02 2022
+# Finished Make data base on Tue Jul  5 15:04:05 2022

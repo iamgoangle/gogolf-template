@@ -2,7 +2,10 @@ package main
 
 import (
 	"log"
-	"os"
+
+	"github.com/iamgoangle/gogolf-template/cmd/repository"
+	"github.com/iamgoangle/gogolf-template/cmd/services"
+	"github.com/iamgoangle/gokub/env/required"
 
 	"github.com/go-playground/validator/v10"
 	"github.com/iamgoangle/gogolf-template/cmd/handler"
@@ -12,8 +15,8 @@ import (
 
 var (
 	appPort string
-	//appName string
-	//
+	appName string
+
 	//mongodbHost     string
 	//mongodbUsername string
 	//mongodbPassword string
@@ -24,8 +27,8 @@ var (
 )
 
 func initAppConfigs() {
-	appPort = os.Getenv("APP_PORT")
-	//appName = os.Getenv("APP_NAME")
+	appPort = required.GetEnv("APP_PORT")
+	appName = required.GetEnv("APP_NAME")
 
 	log.Print("[initAppConfigs]: initial app config success") // DO NOT USING THIS LOGGER IN PRODUCTION
 }
@@ -46,13 +49,25 @@ func main() {
 	initRedisConfigs()
 	initMongoConfigs()
 
+	log.Printf("== started %s app ==", appName)
+
 	e := echo.New()
 	e.Debug = false
 	e.Validator = &handler.CustomValidator{
 		Validator: validator.New(),
 	}
 
-	h, err := handler.New(e, appPort)
+	mgoRepo, err := repository.NewMongoDB(&repository.MongoConfigs{})
+	if err != nil {
+		panic(err)
+	}
+
+	userService, err := services.NewUserService(mgoRepo)
+	if err != nil {
+		panic(err)
+	}
+
+	h, err := handler.New(e, appPort, userService)
 	if err != nil {
 		panic(err)
 	}
