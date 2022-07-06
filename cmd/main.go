@@ -49,7 +49,7 @@ func main() {
 	initRedisConfigs()
 	initMongoConfigs()
 
-	log.Printf("== started %s app ==", appName)
+	log.Printf("== started %s app is works ==", appName)
 
 	e := echo.New()
 	e.Debug = false

@@ -1,0 +1,9 @@
+FROM golang:1.18-alpine3.14
+
+ENV CGO_ENABLED=0
+ENV GO111MODULE=on
+
+RUN apk --no-cache add ca-certificates && \
+    wget -O - https://raw.githubusercontent.com/cosmtrek/air/master/install.sh | sh -s -- -b $(go env GOPATH)/bin
+
+CMD ["air"]
