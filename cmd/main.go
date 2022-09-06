@@ -3,14 +3,13 @@ package main
 import (
 	"log"
 
+	"github.com/go-playground/validator/v10"
 	"github.com/iamgoangle/gogolf-template/cmd/repository"
 	"github.com/iamgoangle/gogolf-template/cmd/services"
 	"github.com/iamgoangle/gokub/env/required"
-
-	"github.com/go-playground/validator/v10"
-	"github.com/iamgoangle/gogolf-template/cmd/handler"
-
 	"github.com/labstack/echo/v4"
+
+	"github.com/iamgoangle/gogolf-template/cmd/handler"
 )
 
 var (
@@ -23,7 +22,6 @@ var (
 	//
 	//redisHost     string
 	//redisUsername string
-	//redisPassword string
 )
 
 func initAppConfigs() {

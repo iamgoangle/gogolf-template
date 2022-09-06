@@ -31,3 +31,7 @@ func (s *UserService) Create(*domain.User) (*domain.User, error) {
 		Email: usrRepo.Email,
 	}, nil
 }
+
+func (s *UserService) Delete() error {
+	return nil
+}

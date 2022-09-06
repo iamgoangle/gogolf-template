@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/labstack/echo/v4"
 
@@ -47,8 +48,9 @@ func (h *Handler) RunServer() error {
 	}
 
 	s := http.Server{
-		Addr:    ":" + h.Port,
-		Handler: h.Server,
+		Addr:              ":" + h.Port,
+		ReadHeaderTimeout: 30 * time.Second,
+		Handler:           h.Server,
 	}
 
 	log.Printf("[Handler.RunServer]: initial the service on port %s ... \n", h.Port)

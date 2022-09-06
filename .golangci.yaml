@@ -12,7 +12,6 @@ linters:
     - gofmt
     - goconst
     - goimports
-    - golint
     - gosec
     - gosimple
     - govet
@@ -20,9 +19,7 @@ linters:
     - misspell
     - nakedret
     - prealloc
-    - scopelint
     - staticcheck
-    - structcheck
     - stylecheck
     - typecheck
     - unconvert
